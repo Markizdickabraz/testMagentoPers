@@ -20,9 +20,9 @@
  */
 
 module.exports = {
-        tasks8_theme: {
+    tasks9_theme: {
             area: 'frontend',
-            name: 'Vendor/tasks8_theme',
+            name: 'Vendor/tasks9_theme',
             locale: 'en_US',
             files: [
                 'css/styles-m',

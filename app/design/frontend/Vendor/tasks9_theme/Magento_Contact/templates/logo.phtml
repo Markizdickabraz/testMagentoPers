@@ -1,0 +1,12 @@
+<?php
+/**
+ * @var $escaper \Magento\Framework\Escaper
+ */
+$baseUrl = $this->getBaseUrl(); 
+?>
+
+<div>
+    <a href="<?= $baseUrl ?>">
+        <img src="<?= $this->getViewFileUrl('images/logo-white.svg'); ?>" alt="<?= $escaper->escapeHtmlAttr(__('logo perspective')) ?>">
+    </a>
+</div>
