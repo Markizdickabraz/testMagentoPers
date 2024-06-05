@@ -81,5 +81,8 @@
     "fast-glob": {
       "glob-parent": "~6.0.2"
     }
+  },
+  "dependencies": {
+    "grunt-cli": "^1.4.3"
   }
 }

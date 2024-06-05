@@ -1,0 +1,56 @@
+<?php
+
+/**@var \Magento\Framework\Escaper $escaper */
+/** @var \Magento\Contact\Block\ContactForm $block */
+
+$baseUrl = $escaper->escapeUrl($this->getBaseUrl());
+?>
+<div class="address_container">
+    <div>
+
+        <?= $block->getChildHtml('contact.logo'); ?>
+
+        <div class="address_content">
+            <div>
+                <h2 class="address_content-title"><?= $escaper->escapeHtml(__('Phones')); ?></h2>
+
+                <ul class="address_content-list">
+                    <li class="address_content-item">
+                        <p class="address_content-text"><?= $escaper->escapeHtml(__('Client service')); ?></p>
+                        <a class="address_content-link" href="<?= $escaper->escapeUrl('tel:+13122390843'); ?>"><?= $escaper->escapeHtml('+1 312-239-0843'); ?></a>
+                    </li>
+                    <li class="address_content-item">
+                        <p class="address_content-text"><?= $escaper->escapeHtml(__('Support team')); ?></p>
+                        <a class="address_content-link" href="<?= $escaper->escapeUrl('tel:+380443621209'); ?>"><?= $escaper->escapeHtml('+38 (044) 362-12-09'); ?></a>
+                    </li>
+                    <li class="address_content-item">
+                        <p class="address_content-text"><?= $escaper->escapeHtml(__('Department of Human Resources')); ?></p>
+                        <a class="address_content-link" href="<?= $escaper->escapeUrl('tel:+380934454887'); ?>"><?= $escaper->escapeHtml('+38 (093) 445-48-87'); ?></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="address_content-title"><?= $escaper->escapeHtml(__('Email')); ?></h2>
+
+                <ul class="address_content-list">
+                    <li class="address_content-item">
+                        <p class="address_content-text"><?= $escaper->escapeHtml(__('Client service department')); ?></p>
+                        <a class="address_content-link" href="<?= $escaper->escapeUrl('mailto:order@perspective.net.ua'); ?>"><?= $escaper->escapeHtml('order@perspective.net.ua'); ?></a>
+                    </li>
+                    <li class="address_content-item">
+                        <p class="address_content-text"><?= $escaper->escapeHtml(__('Support department')); ?></p>
+                        <a class="address_content-link" href="<?= $escaper->escapeUrl('mailto:support@perspective.net.ua'); ?>"><?= $escaper->escapeHtml('support@perspective.net.ua'); ?></a>
+                    </li>
+                    <li class="address_content-item">
+                        <p class="address_content-text"><?= $escaper->escapeHtml(__('Quality control department')); ?></p>
+                        <p class="address_content-link"><?= $escaper->escapeHtml('qualitycheck@perspective.net.ua'); ?></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <?= $block->getChildHtml('contactForm'); ?>
+
+</div>
