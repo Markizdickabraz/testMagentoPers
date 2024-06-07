@@ -1,0 +1,42 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Contact Form"}} @-->
+<!--@vars {
+"var data.comment":"Comment",
+"var data.email":"Sender Email",
+"var data.name":"Sender Name",
+"var data.telephone":"Sender Telephone"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<table class="message-details">
+    <tr>
+        <td><strong>{{trans "Name"}}</strong></td>
+        <td>{{var data.name}}</td>
+    </tr>
+    <tr>
+        <td><strong>{{trans "Email"}}</strong></td>
+        <td>{{var data.email}}</td>
+    </tr>
+    <tr>
+        <td><strong>{{trans "Phone"}}</strong></td>
+        <td>{{var data.telephone}}</td>
+    </tr>
+    <tr>
+        <td><strong>{{trans "Subject"}}</strong></td>
+        <td>{{var data.comment}}</td>
+    </tr>
+</table>
+
+<p>{{trans "Ім'я-"}} {{var data.name}}<br>
+    {{trans "Номер телефону-"}} {{var data.telephone}}<br>
+    {{trans "Адреса сторінки-"}}<a href="https://app.test123.test/contact/">app.test123.test/contact/<br></a>
+    {{trans "Тематика звернення-"}} {{var data.comment}}<br>
+    {{trans "Email-"}} {{var data.email}}<br></p>
+
+{{template config_path="design/email/footer_template"}}
