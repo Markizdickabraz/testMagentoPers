@@ -108,6 +108,6 @@ module.exports = function (grunt) {
         grunt.registerTask(name, task);
     });
 
-    grunt.registerTask('compile', ['clean:tasks9_theme', 'exec:tasks9_theme', 'less:tasks9_theme']);
+    grunt.registerTask('compile', ['clean:std547_theme', 'exec:std547_theme', 'less:std547_theme']);
     grunt.registerTask('default', ['compile']);
 };
