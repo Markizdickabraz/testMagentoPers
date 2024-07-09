@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+
+    <body>
+
+        <referenceBlock class="Magento\Wishlist\Block\Customer\Wishlist\Item\Column\Edit" name="customer.wishlist.item.edit" remove="true"/>
+        <referenceBlock name="customer.wishlist.item.comment" remove="true" />
+        <referenceBlock name="customer.wishlist.item.review" remove="true" />
+        <referenceBlock name="customer.wishlist.button.update" remove="true"/>
+        <referenceBlock name="page.main.title" remove="true"/>
+
+        <referenceContainer name="content">
+            <container name="custom.title.container.mark" htmlTag="div" htmlClass="custom__title-container" before="-">
+                <block name="wishlist.title.custom.mark" template="Magento_Wishlist::custom-title.phtml" />
+            </container>
+        </referenceContainer>
+
+        <move element="customer.wishlist.button.share" destination="customer.wishlist.buttons" after="customer.wishlist.button.toCart" />
+
+    </body>
+
+</page>
