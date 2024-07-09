@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/* @var \Magento\Wishlist\Block\Customer\Wishlist\Item\Column\Remove $block */
+?>
+
+<button type="button"
+        data-role="remove-all-wishlist"
+        data-post-remove='<?= /* @noEscape */ $block->getItemRemoveParams($block->getItem()) ?>'
+        data-mage-init='{"removeAllWishlist" : {}} '
+        class="wishlist__removeAll--btn"
+>
+    <span>
+        <?= $block->escapeHtml(__('Очистити список бажань')) ?>
+    </span>
+</button>

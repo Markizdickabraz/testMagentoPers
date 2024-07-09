@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+
+
+
+<!--        <referenceBlock name="header.container" remove="true" />-->
+<!--        <referenceContainer name="header.panel.wrapper" remove="true" />-->
+<!--        <referenceBlock name="navigation.sections" remove="true" />-->
+
+       <referenceContainer name="after.body.start">
+           <container name="custom.header.mark" htmlClass="custom-header" htmlTag="div" after="-">
+               <container name="custom.header.logo.container" htmlTag="div" htmlClass="custom-header-logo__container">
+                   <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
+                       <arguments>
+                           <argument name="logoPathResolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoPathResolver</argument>
+                           <argument name="logo_size_resolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoSizeResolver</argument>
+                       </arguments>
+                   </block>
+                   <block name="custom.header.navigation.mark" template="Magento_Theme::custom-navigation.phtml" />
+               </container>
+              <container name="custom.header.nav.container" htmlTag="div">
+                  <block name="custom.header.top" template="Magento_Theme::custom-top.phtml" />
+                  <block name="custom.header.bottom" template="Magento_Theme::custom-bottom.phtml">
+                      <block name="custom.search.mark" template="Magento_Theme::custom-search.phtml" >
+                          <arguments>
+                              <argument name="configProvider" xsi:type="object">Magento\Search\ViewModel\ConfigProvider</argument>
+                              <argument name="additionalSearchFormData" xsi:type="object">Magento\Search\ViewModel\AdditionalSearchFormData</argument>
+                          </arguments>
+                      </block>
+                  </block>
+              </container>
+           </container>
+       </referenceContainer>
+
+
+<!--        <move element="header.panel" destination="custom.header.bottom" />-->
+
+    </body>
+</page>
