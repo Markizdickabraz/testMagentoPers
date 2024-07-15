@@ -52,5 +52,6 @@
           <% } %>
       </form>
     </script>
+    <?= ($block->getChildHtml('custom.pagination.mark')) ?>
     <div class="toolbar wishlist-toolbar"><br><?= $block->getChildHtml('wishlist_item_pager'); ?></div>
 <?php endif ?>

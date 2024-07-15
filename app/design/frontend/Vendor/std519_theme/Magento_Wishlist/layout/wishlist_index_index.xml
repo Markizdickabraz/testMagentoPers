@@ -20,9 +20,15 @@
             <container name="custom.title.container.mark" htmlTag="div" htmlClass="custom__title-container" before="-">
                 <block name="wishlist.title.custom.mark" template="Magento_Wishlist::custom-title.phtml" />
             </container>
+                <block name="custom.pagination.mark" template="Magento_Wishlist::custom-pagination.phtml" />
+            <container name="custom.customer.wishlist.buttons" label="Wishlist Control Buttons">
+                <block class="Magento\Wishlist\Block\Customer\Wishlist\Button" name="custom.mark.customer.wishlist.button.toCart" template="Magento_Wishlist::button/tocart.phtml" cacheable="false"/>
+                <block class="Magento\Wishlist\Block\Customer\Wishlist\Button" name="custom.mark.customer.wishlist.button.share" template="Magento_Wishlist::button/share.phtml" cacheable="false"/>
+            </container>
         </referenceContainer>
-
+        <move element="custom.pagination.mark" destination="customer.wishlist"/>
         <move element="customer.wishlist.button.share" destination="customer.wishlist.buttons" after="customer.wishlist.button.toCart" />
+        <referenceContainer name="customer.wishlist.buttons"  remove="true"/>
 
     </body>
 
