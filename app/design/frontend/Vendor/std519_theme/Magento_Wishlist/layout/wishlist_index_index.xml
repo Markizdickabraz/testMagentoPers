@@ -21,7 +21,7 @@
                 <block name="wishlist.title.custom.mark" template="Magento_Wishlist::custom-title.phtml" />
             </container>
                 <block name="custom.pagination.mark" template="Magento_Wishlist::custom-pagination.phtml" />
-            <container name="custom.customer.wishlist.buttons" label="Wishlist Control Buttons">
+            <container name="custom.customer.wishlist.buttons" htmlTag="div" htmlClass="wishlist__btn-container" label="Wishlist Control Buttons">
                 <block class="Magento\Wishlist\Block\Customer\Wishlist\Button" name="custom.mark.customer.wishlist.button.toCart" template="Magento_Wishlist::button/tocart.phtml" cacheable="false"/>
                 <block class="Magento\Wishlist\Block\Customer\Wishlist\Button" name="custom.mark.customer.wishlist.button.share" template="Magento_Wishlist::button/share.phtml" cacheable="false"/>
             </container>

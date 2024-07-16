@@ -11,9 +11,9 @@
 
 
 
-<!--        <referenceBlock name="header.container" remove="true" />-->
-<!--        <referenceContainer name="header.panel.wrapper" remove="true" />-->
-<!--        <referenceBlock name="navigation.sections" remove="true" />-->
+        <referenceBlock name="header.container" remove="true" />
+        <referenceContainer name="header.panel.wrapper" remove="true" />
+        <referenceBlock name="navigation.sections" remove="true" />
 
        <referenceContainer name="after.body.start">
            <container name="custom.header.mark" htmlClass="custom-header" htmlTag="div" after="-">
@@ -25,6 +25,7 @@
                        </arguments>
                    </block>
                    <block name="custom.header.navigation.mark" template="Magento_Theme::custom-navigation.phtml" />
+
                </container>
               <container name="custom.header.nav.container" htmlTag="div">
                   <block name="custom.header.top" template="Magento_Theme::custom-top.phtml" />
@@ -39,9 +40,5 @@
               </container>
            </container>
        </referenceContainer>
-
-
-<!--        <move element="header.panel" destination="custom.header.bottom" />-->
-
     </body>
 </page>

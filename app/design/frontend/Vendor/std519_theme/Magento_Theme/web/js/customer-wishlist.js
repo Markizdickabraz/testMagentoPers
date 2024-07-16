@@ -8,7 +8,6 @@ define([
 
     $.widget('mage.customerDataWidgetWishlist', {
         _create: function () {
-            console.log(this.element);
 
             customerData.get('wishlist').subscribe(function () {
                 this.updateWishlistCounter();

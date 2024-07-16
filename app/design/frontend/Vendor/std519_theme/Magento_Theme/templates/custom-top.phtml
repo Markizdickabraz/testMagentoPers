@@ -1,26 +1,27 @@
 <div class="custom-header-top__container">
     <ul class="custom-header-top-left__list">
         <li class="custom-header-top-left__item">
-            <a class="custom-header-top-left__link" href="#">Доставка та оплата</a>
+            <a class="custom-header-top-left__link" href="#"><?= $block->escapeHtml(__('Доставка та оплата')) ?></a>
         </li>
         <li class="custom-header-top-left__item">
-            <a class="custom-header-top-left__link" href="#">Оптовим клієнтам</a>
+            <a class="custom-header-top-left__link" href="#"><?= $block->escapeHtml(__('Оптовим клієнтам')) ?></a>
         </li>
         <li class="custom-header-top-left__item">
-            <a class="custom-header-top-left__link" href="#">Контакти</a>
+            <a class="custom-header-top-left__link" href="#"><?= $block->escapeHtml(__('Контакти')) ?></a>
         </li>
     </ul>
 
     <ul class="custom-header-top-right__list">
         <li class="custom-header-top-right__item">
             <div class="custom-header-top-right-rete">
-                <span class="custom-header-top-right__rate--name">Курс</span>
+                <span class="custom-header-top-right__rate--name"><?= $block->escapeHtml(__('Курс')) ?></span>
                 <span class="custom-header-top-right__rate--dollar">$ 27.95</span>
                 <span class="custom-header-top-right__rate--euro">&euro; 33.50</span>
             </div>
         </li>
         <li class="custom-header-top-right__item">
-            <a class="custom-header-top-right__link--ru" href="#">RU</a>
-            <a class="custom-header-top-right__link--ua" href="#">UA</a>
+            <a class="custom-header-top-right__link--ru" href="#"><?= $block->escapeHtml(__('RU')) ?></a>
+            <a class="custom-header-top-right__link--ua" href="#"><?= $block->escapeHtml(__('UA')) ?></a>
+        </li>
     </ul>
 </div>

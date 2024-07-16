@@ -45,7 +45,8 @@ define([
          * @return {String}
          */
         getFirstName: function () {
-            return customerData.get('customer')()?.firstname;
+            console.log(customerData)
+            // return customerData.get('customer')()?.firstname;
         },
     });
 
