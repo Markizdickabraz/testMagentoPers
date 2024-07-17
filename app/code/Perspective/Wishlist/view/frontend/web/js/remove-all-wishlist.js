@@ -47,3 +47,5 @@ define([
 
     return $.custom.removeAllWishlist;
 });
+
+

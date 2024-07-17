@@ -1,0 +1,25 @@
+{
+  "name": "magetop/infinitescroll",
+  "description": "Infinite scroll for magento 2 automatically loads product catalog without reloading the page.",
+  "type": "magento2-module",
+  "license": [
+      "OSL-3.0",
+      "AFL-3.0"
+  ],
+  "authors": [
+    {
+      "name": "Magetop",
+      "email": "support@magetop.com",
+      "homepage": "https://www.magetop.com",
+      "role": "Technical Support"
+    }
+  ],
+  "autoload": {
+      "files": [
+          "registration.php"
+      ],
+      "psr-4": {
+          "Magetop\\InfiniteScroll\\": ""
+      }
+  }
+}

@@ -26,6 +26,25 @@
         display: flex;
         justify-content: space-between;
 
+        &-top {
+            &-right {
+                &__link {
+                    &--en {
+                        color: #fff !important;
+                        transition: all 0.4s ease-in-out;
+                        &:hover {
+                            color: #ff6600 !important;
+                        }
+                    }
+                    &--ua {
+                        color: #ff6600 !important;
+                        border-left: 1px solid white;
+                        padding-left: 4px;
+                    }
+                }
+            }
+        }
+
         &-bottom {
             &__tel {
                 color: white;

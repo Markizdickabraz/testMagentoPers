@@ -1,0 +1,35 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ * @var \Magento\Wishlist\Block\Customer\Wishlist\Item\Column\Remove $block
+ */
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get(\Magento\Customer\Model\Session::class);
+$isLoggedIn = $customerSession->isLoggedIn();
+?>
+
+<?php if ($isLoggedIn): ?>
+    <div id="customer-name-sidebar" class="custom-sidebar__container">
+        <div class="custom-sidebar__img-container">
+            <img src="<?= $block->getViewFileUrl('images/user-sidebar.svg')?>" alt="user icon" />
+        </div>
+        <div class="custom-sidebar__title-container">
+            <p data-mage-init='{"Magento_Theme/js/customer-name":{}}' id="fullname"></p>
+            <p><?= $customerSession->getCustomer()->getEmail(); ?></p>
+        </div>
+    </div>
+<?php endif; ?>
+
+<div class="block <?= $block->escapeHtmlAttr($block->getBlockCss()) ?>">
+    <div class="title <?= $block->escapeHtmlAttr($block->getBlockCss()) ?>-title"
+         data-mage-init='{"toggleAdvanced": {"toggleContainers": "#<?= $block->escapeHtmlAttr($block->getBlockCss()) ?>", "selectorsToggleClass": "active"}}'>
+        <strong>
+            <?= $block->escapeHtml(__($block->getBlockTitle())) ?>
+        </strong>
+    </div>
+    <div class="content <?= $block->escapeHtmlAttr($block->getBlockCss()) ?>-content"
+         id="<?= $block->escapeHtmlAttr($block->getBlockCss()) ?>">
+        <?= $block->getChildHtml() ?>
+    </div>
+</div>

@@ -9,11 +9,9 @@
     <update handle="default_head_blocks"/>
     <body>
 
-
-
         <referenceBlock name="header.container" remove="true" />
         <referenceContainer name="header.panel.wrapper" remove="true" />
-        <referenceBlock name="navigation.sections" remove="true" />
+<!--        <referenceBlock name="navigation.sections" remove="true" />-->
 
        <referenceContainer name="after.body.start">
            <container name="custom.header.mark" htmlClass="custom-header" htmlTag="div" after="-">
@@ -40,5 +38,6 @@
               </container>
            </container>
        </referenceContainer>
+
     </body>
 </page>

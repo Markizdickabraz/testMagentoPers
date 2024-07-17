@@ -54,3 +54,4 @@ define([
         return $.mage.wishlist;
     };
 });
+

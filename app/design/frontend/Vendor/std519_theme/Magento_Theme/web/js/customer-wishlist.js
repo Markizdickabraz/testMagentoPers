@@ -49,3 +49,5 @@ define([
 
     return $.mage.customerDataWidgetWishlist;
 });
+
+
